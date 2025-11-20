@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 30px;
+}
+
+#tapeContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  border: 1px solid #333;
+  padding: 10px;
+  width: 30px;
+  text-align: center;
+}
+
+.head {
+  background-color: yellow;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+}
