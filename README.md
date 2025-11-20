@@ -1,5 +1,6 @@
 # Simulador de Máquina de Turing Simple
 *Estudiantes:* Juan José Yepez,nicolas valle roman 
+
 *Curso:* Gramáticas y Lenguajes Formales  
 *Proyecto:* Simulador de Máquina de Turing (a|b)+
 
