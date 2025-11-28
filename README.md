@@ -93,7 +93,7 @@ Donde:
 
 ---
 
-### funcion de Transición
+### *funcion de Transición
 
 | Estado | Símbolo leído | Símbolo escrito | Movimiento | Nuevo estado |
 |---------|----------------|------------------|-------------|----------------|
