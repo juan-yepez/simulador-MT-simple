@@ -38,10 +38,26 @@ Gracias a su estructura simple, es muy fácil demostrar cómo una Máquina de Tu
 ---
 
 ### AFD
-Estados:
-- q0: inicio
-- q1: aceptación
-- q_rechaza: rechazo
+
+ AFD = (Q, Σ, δ, q0, F)*
+
+Donde:
+- *Q:* Conjunto finito de estados  
+  Q = { q0, q1, q_rechaza }
+
+- *Σ:* Alfabeto de entrada  
+  Σ = { a, b }
+
+- *δ:* Función de transición (definida más abajo)
+
+- *q0:* Estado inicial  
+  q0
+
+- *F:* Conjunto de estados de aceptación  
+  F = { q1 }
+
+  
+###  *δ: Función de transición*
 
 | Estado | Símbolo | Nuevo estado |
 |--------|----------|---------------|
@@ -52,6 +68,32 @@ Estados:
 | q0 o q1 | otro símbolo | q_rechaza |
 
 ### MT Equivalente
+ MT = (Q, Σ, Γ, δ, q0, q_acepta, q_rechaza)*
+
+Donde:
+
+- *Q:* Conjunto finito de estados  
+  Q = { q0, q1, q_acepta, q_rechaza }
+
+- *Σ:* Alfabeto de entrada (símbolos válidos del lenguaje)  
+  Σ = { a, b }
+
+- *Γ:* Alfabeto de la cinta (símbolos que la máquina puede leer o escribir)  
+  Γ = { a, b, _ }  
+  El símbolo _ representa el *espacio en blanco* de la cinta.
+
+- *q0:* Estado inicial  
+  q0
+
+- *q_acepta:* Estado de aceptación (la cadena pertenece al lenguaje)  
+  q_acepta
+
+- *q_rechaza:* Estado de rechazo (la cadena no pertenece al lenguaje)  
+  q_rechaza
+
+---
+
+### funcion de Transición
 
 | Estado | Símbolo leído | Símbolo escrito | Movimiento | Nuevo estado |
 |---------|----------------|------------------|-------------|----------------|
@@ -201,7 +243,7 @@ function run() {
 ### *6️ Su MT emula un AFD. ¿Qué tendría que cambiar para que resolviera un problema que un AFD no puede?
 Para que la máquina se convirtiera en una Máquina de Turing completa (y no solo un AFD emulado), sería necesario modificar su comportamiento así:
 
-```javascript**
+```javascript
 // Función step() conceptual: representa un solo paso de la Máquina de Turing completa
 function step() {
   // Lee el símbolo actual en la posición del cabezal
@@ -218,6 +260,29 @@ function step() {
   }
 }
 ```
+### Conclusión del Proyecto
+
+Este proyecto permitió comprender cómo una Máquina de Turing puede emular el funcionamiento de un Autómata Finito Determinista (AFD).
+Mediante la expresión regular (a|b)+, se logró construir un simulador capaz de:
+	•	Leer una cinta de entrada símbolo por símbolo.
+	•restirngir y Mover un cabezal de lectura unicamente  hacia la derecha limitando asi gran parte del poder  de una mt.
+	•	Cambiar de estado según las reglas de transición.
+	•	Determinar si la cadena pertenece o no al lenguaje definido.
+
+La implementación en HTML, CSS y JavaScript permitió visualizar de forma práctica los conceptos teóricos de la materia, uniendo lenguajes formales y desarrollo web en una sola aplicación funcional.
+
+---
+
+##  Enlaces del Proyecto
+
+-  *Repositorio en GitHub:*  
+  [https://github.com/Juan-Yepez/simulador-MT-simple](https://github.com/Juan-Yepez/simulador-MT-simple)
+
+-  *Simulador en línea (GitHub Pages):*  
+  [https://juan-yepez.github.io/simulador-MT-simple/](https://juan-yepez.github.io/simulador-MT-simple/)
+
+---
+
 
 
   
