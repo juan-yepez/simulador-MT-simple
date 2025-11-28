@@ -92,7 +92,7 @@ function loadTape() {
   updateDisplay();
 }
 ```
-###*2¿Dónde está el cabezal?
+### *2¿Dónde está el cabezal?
 
 El cabezal es la parte de la máquina que se mueve sobre la cinta.
 Está representado por la variable head, la cual indica la posición actual de lectura.
@@ -109,7 +109,7 @@ function step() {
   updateDisplay(); // actualiza la interfaz visual
 }
 ```
-###*3️ ¿Dónde está el registro de estado?
+### *3️ ¿Dónde está el registro de estado?
 
 El estado actual de la máquina se guarda en la variable state.
 Indica en qué punto del autómata se encuentra la ejecución (q0, q1, q_acepta, q_rechaza).
@@ -201,7 +201,7 @@ function run() {
 ### *6️ Su MT emula un AFD. ¿Qué tendría que cambiar para que resolviera un problema que un AFD no puede?
 Para que la máquina se convirtiera en una Máquina de Turing completa (y no solo un AFD emulado), sería necesario modificar su comportamiento así:
 
-```javascript
+```javascript**
 // Función step() conceptual: representa un solo paso de la Máquina de Turing completa
 function step() {
   // Lee el símbolo actual en la posición del cabezal
